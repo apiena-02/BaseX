@@ -1,0 +1,38 @@
+body {
+    background-color: rgb(151, 201, 244);
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20vh;
+}
+
+.text-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px; 
+}
+
+#test {
+    background-color: #f8f8f8;
+    padding: 10px 30px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    max-width: 300px;
+}
+.container select{
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 5px;
+    margin: 0px 10px 0px 10px;
+    
+}
+
+.container button{
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 10%;
+}
