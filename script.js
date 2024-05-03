@@ -80,7 +80,7 @@ function myFunction() {
         ans = Number(num).toString(16);
     } 
     else {
-        ans = "Invalid"
+        ans = "Invalid Selectors or Input"
     }
 
     document.getElementById("test").innerHTML = ans;
