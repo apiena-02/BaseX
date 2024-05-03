@@ -25,29 +25,9 @@ function myFunction() {
     else if (x == y) {
         ans = num;
     } 
-    
+    // Binary Conversion
     else if (x == "Binary" && y == "Decimal") {
         ans = parseInt(num, 2);
-    } 
-    
-    else if (x == "Hexadecimal" && y == "Decimal") {
-        ans = parseInt(num, 16);
-    } 
-    
-    else if (x == "Octal" && y == "Decimal") {
-        ans = parseInt(num, 8);
-    } 
-    
-    else if (x == "Decimal" && y == "Binary") {
-        ans = Number(num).toString(2);
-    } 
-    
-    else if (x == "Decimal" && y == "Octal") {
-        ans = Number(num).toString(8);
-    } 
-    
-    else if (x == "Decimal" && y == "Hexadecimal") {
-        ans = Number(num).toString(16);
     } 
     
     else if (x == "Binary" && y == "Octal") {
@@ -58,8 +38,12 @@ function myFunction() {
     else if (x == "Binary" && y == "Hexadecimal") {
         tempe = parseInt(num, 2);
         ans = Number(tempe).toString(16);
+    }
+    // Hexadecimal Conversion
+    else if (x == "Hexadecimal" && y == "Decimal") {
+        ans = parseInt(num, 16);
     } 
-    
+     
     else if (x == "Hexadecimal" && y == "Binary") {
         tempe = parseInt(num, 16);
         ans = Number(tempe).toString(2);
@@ -68,6 +52,10 @@ function myFunction() {
     else if (x == "Hexadecimal" && y == "Octal") {
         tempe = parseInt(num, 16);
         ans = Number(tempe).toString(8);
+    } 
+    // Octal Conversion
+    else if (x == "Octal" && y == "Decimal") {
+        ans = parseInt(num, 8);
     } 
     
     else if (x == "Octal" && y == "Binary") {
@@ -79,6 +67,18 @@ function myFunction() {
         tempe = parseInt(num, 8);
         ans = Number(tempe).toString(16);
     }
+    // Decimal Conversion
+    else if (x == "Decimal" && y == "Binary") {
+        ans = Number(num).toString(2);
+    } 
+    
+    else if (x == "Decimal" && y == "Octal") {
+        ans = Number(num).toString(8);
+    } 
+    
+    else if (x == "Decimal" && y == "Hexadecimal") {
+        ans = Number(num).toString(16);
+    } 
 
     document.getElementById("test").innerHTML = ans;
 }
