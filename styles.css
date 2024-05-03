@@ -10,9 +10,9 @@ body {
 }
 .text-container{
     margin: auto;
-    width: 50%;
+    width: 40%;
     text-align: center;
-    margin-top: 25px;
+    margin-top: 40px;
 }
 .container select,
 .container input[type="text"],
@@ -27,6 +27,6 @@ body {
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
-    border-radius: 5x;
-    background-color: #ccc;
+    border-radius: 15px;
+    background-color: white;
 }
