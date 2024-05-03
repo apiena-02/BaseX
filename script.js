@@ -79,6 +79,9 @@ function myFunction() {
     else if (x == "Decimal" && y == "Hexadecimal") {
         ans = Number(num).toString(16);
     } 
+    else {
+        ans = "Invalid"
+    }
 
     document.getElementById("test").innerHTML = ans;
 }
