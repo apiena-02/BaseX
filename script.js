@@ -1,17 +1,17 @@
 function convertBase() {
     // Get the selected conversion from and to bases, and the input number
-    var fromBase = document.getElementById("selectFrom").value;
-    var toBase = document.getElementById("selectTo").value;
-    var inputNumber = document.getElementById("inputNumber").value;
+    let fromBase = document.getElementById("selectFrom").value;
+    let toBase = document.getElementById("selectTo").value;
+    let inputNumber = document.getElementById("inputNumber").value;
     
     // Variable to hold the result of conversion
-    var result; 
+    let result; 
    
     // Flag to check if the input is valid
-    var isValid = true; 
+    let isValid = true; 
     
     // Check validity of input number based on the selected base
-    for (var i = 0; i < inputNumber.length; i++) {
+    for (let i = 0; i < inputNumber.length; i++) {
         if (fromBase == "Binary" && (inputNumber[i] != '0' && inputNumber[i] != '1')) {
             isValid = false;
         } 
