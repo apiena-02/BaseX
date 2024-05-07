@@ -78,7 +78,7 @@ function convertBase() {
         result = Number(inputNumber).toString(16);
     } 
 
-    // Invalid selection of bases or input
+    // Invalid input or selection of bases
     else {
         result = "Invalid Selectors or Input";
     }
