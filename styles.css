@@ -2,17 +2,17 @@ body {
     background-color: rgb(151, 201, 244);
     font-family:Arial, Helvetica, sans-serif
 }
-.title-container{
+header{
     margin: auto;
     width: 50%;
     text-align: center;
     margin-top: 50px;
 }
-.title-container h1{
+header h1{
     font-size: 40px;
     color: blue;
 }
-.title-container p{
+header p{
     margin-top: 50px;
     color: rgb(0, 72, 120);
     font-size: 16px;
@@ -23,12 +23,6 @@ body {
     text-align: center;
     margin-top: 50px;
 }
-.result-container{
-    margin: auto;
-    width: 40%;
-    text-align: center;
-    margin-top: 40px;
-}
 .input-container select,
 .input-container input[type="text"],
 .input-container button {
@@ -37,6 +31,12 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-right: 10px;
+}
+.result-container{
+    margin: auto;
+    width: 40%;
+    text-align: center;
+    margin-top: 40px;
 }
 .result-container p {
     padding: 10px;
