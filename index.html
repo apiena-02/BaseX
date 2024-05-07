@@ -12,7 +12,7 @@
         <p>Meet the Base Converter Tool! Easily switch between binary, decimal, hexadecimal, and octal numbers. Select your starting and ending formats, enter your number, and click convert.</p>
     </div>
     <div class="input-container">
-        <input type="text" id="number" name="number" placeholder="Enter number here" />
+        <input type="text" id="inputNumber" name="inputNumber" placeholder="Enter number here" />
 
         <select id="selectFrom">
             <option disabled selected>From</option>
@@ -30,11 +30,11 @@
             <option>Octal</option>
         </select>
     
-        <button onclick="myFunction()">Convert</button>
+        <button onclick="convertBase()">Convert</button>
     </div>
 
     <div class="result-container">
-        <p id="test"></p>
+        <p id="resultText"></p>
     </div>
 
     <script src="script.js"></script>

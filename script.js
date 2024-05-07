@@ -1,7 +1,7 @@
-function myFunction() {
+function convertBase() {
     var x = document.getElementById("selectFrom").value;
     var y = document.getElementById("selectTo").value;
-    var num = document.getElementById("number").value;
+    var num = document.getElementById("inputNumber").value;
     var ans;
     var tempe;
     var isValid = true;
@@ -83,5 +83,5 @@ function myFunction() {
         ans = "Invalid Selectors or Input"
     }
 
-    document.getElementById("test").innerHTML = ans;
+    document.getElementById("resultText").innerHTML = ans;
 }
