@@ -2,43 +2,43 @@ body {
     background-color: rgb(151, 201, 244);
     font-family:Arial, Helvetica, sans-serif
 }
-.title{
+.title-container{
     margin: auto;
     width: 50%;
     text-align: center;
     margin-top: 50px;
 }
-.title h1{
+.title-container h1{
     font-size: 40px;
     color: blue;
 }
-.title p{
+.title-container p{
     margin-top: 50px;
     color: rgb(0, 72, 120);
     font-size: 16px;
 }
-.container{
+.input-container{
     margin: auto;
     width: 80%;
     text-align: center;
     margin-top: 50px;
 }
-.text-container{
+.result-container{
     margin: auto;
     width: 40%;
     text-align: center;
     margin-top: 40px;
 }
-.container select,
-.container input[type="text"],
-.container button {
+.input-container select,
+.input-container input[type="text"],
+.input-container button {
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-right: 10px;
 }
-.text-container p {
+.result-container p {
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
