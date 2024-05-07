@@ -7,14 +7,17 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Header section -->
     <header>
         <h1>Base Converter Tool</h1>
         <p>Meet the Base Converter Tool! Easily switch between binary, decimal, hexadecimal, and octal numbers. Select your starting and ending formats, enter your number, and click convert.</p>
     </header>
 
     <div class="input-container">
+        <!-- Input field for entering the number -->
         <input type="text" id="inputNumber" name="inputNumber" placeholder="Enter number here"/>
 
+        <!-- Dropdown for selecting the starting base -->
         <select id="selectFrom">
             <option disabled selected>From</option>
             <option>Binary</option>
@@ -23,6 +26,7 @@
             <option>Octal</option>
         </select>
         
+        <!-- Dropdown for selecting the target base -->
         <select id="selectTo">
             <option disabled selected>To</option>
             <option>Binary</option>
@@ -30,11 +34,13 @@
             <option>Hexadecimal</option>
             <option>Octal</option>
         </select>
-    
+        
+        <!-- Button for base conversion -->
         <button onclick="convertBase()">Convert</button>
     </div>
 
     <div class="result-container">
+        <!-- Displaying the conversion result -->
         <p id="resultText"></p>
     </div>
 

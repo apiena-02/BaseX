@@ -1,87 +1,88 @@
 function convertBase() {
-    var x = document.getElementById("selectFrom").value;
-    var y = document.getElementById("selectTo").value;
-    var num = document.getElementById("inputNumber").value;
-    var ans;
-    var tempe;
-    var isValid = true;
-
-    for (var i = 0; i < num.length; i++) {
-        if (x == "Binary" && (num[i] != '0' && num[i] != '1')) {
+    // Get the selected conversion from and to bases, and the input number
+    var fromBase = document.getElementById("selectFrom").value;
+    var toBase = document.getElementById("selectTo").value;
+    var inputNumber = document.getElementById("inputNumber").value;
+    
+    // Variable to hold the result of conversion
+    var result; 
+   
+    // Flag to check if the input is valid
+    var isValid = true; 
+    
+    // Check validity of input number based on the selected base
+    for (var i = 0; i < inputNumber.length; i++) {
+        if (fromBase == "Binary" && (inputNumber[i] != '0' && inputNumber[i] != '1')) {
             isValid = false;
-        } else if (x == "Octal" && !(num[i] >= '0' && num[i] <= '7')) {
+        } 
+        else if (fromBase == "Octal" && !(inputNumber[i] >= '0' && inputNumber[i] <= '7')) {
             isValid = false;
-        } else if (x == "Hexadecimal" && !((num[i] >= '0' && num[i] <= '9') || (num[i].toLowerCase() >= 'a' && num[i].toLowerCase() <= 'f'))) {
+        } 
+        else if (fromBase == "Hexadecimal" && !((inputNumber[i] >= '0' && inputNumber[i] <= '9') || (inputNumber[i].toLowerCase() >= 'a' && inputNumber[i].toLowerCase() <= 'f'))) {
             isValid = false;
-        } else if (x == "Decimal" && !(num[i] >= '0' && num[i] <= '9')) {
+        } 
+        else if (fromBase == "Decimal" && !(inputNumber[i] >= '0' && inputNumber[i] <= '9')) {
             isValid = false;
         }
     }
 
+    // If input is not valid, set result as "Invalid Input"
     if (!isValid) {
-        ans = "Invalid Input";
+        result = "Invalid Input";
     } 
-    
-    else if (x == y) {
-        ans = num;
+    // If from and to bases are the same, no conversion needed
+    else if (fromBase == toBase) {
+        result = inputNumber;
     } 
-    // Binary Conversion
-    else if (x == "Binary" && y == "Decimal") {
-        ans = parseInt(num, 2);
+    // Conversion from binary
+    else if (fromBase == "Binary" && toBase == "Decimal") { 
+        result = parseInt(inputNumber, 2);
     } 
-    
-    else if (x == "Binary" && y == "Octal") {
-        tempe = parseInt(num, 2);
-        ans = Number(tempe).toString(8);
+    else if (fromBase == "Binary" && toBase == "Octal") { 
+        result = Number(parseInt(inputNumber, 2)).toString(8);
     } 
-    
-    else if (x == "Binary" && y == "Hexadecimal") {
-        tempe = parseInt(num, 2);
-        ans = Number(tempe).toString(16);
-    }
-    // Hexadecimal Conversion
-    else if (x == "Hexadecimal" && y == "Decimal") {
-        ans = parseInt(num, 16);
+    else if (fromBase == "Binary" && toBase == "Hexadecimal") { 
+        result = Number(parseInt(inputNumber, 2)).toString(16);
     } 
-     
-    else if (x == "Hexadecimal" && y == "Binary") {
-        tempe = parseInt(num, 16);
-        ans = Number(tempe).toString(2);
+
+    // Conversion from hexadecimal
+    else if (fromBase == "Hexadecimal" && toBase == "Decimal") { 
+        result = parseInt(inputNumber, 16);
     } 
-    
-    else if (x == "Hexadecimal" && y == "Octal") {
-        tempe = parseInt(num, 16);
-        ans = Number(tempe).toString(8);
+    else if (fromBase == "Hexadecimal" && toBase == "Binary") { 
+        result = Number(parseInt(inputNumber, 16)).toString(2);
     } 
-    // Octal Conversion
-    else if (x == "Octal" && y == "Decimal") {
-        ans = parseInt(num, 8);
+    else if (fromBase == "Hexadecimal" && toBase == "Octal") { 
+        result = Number(parseInt(inputNumber, 16)).toString(8);
     } 
-    
-    else if (x == "Octal" && y == "Binary") {
-        tempe = parseInt(num, 8);
-        ans = Number(tempe).toString(2);
+
+    // Conversion from octal
+    else if (fromBase == "Octal" && toBase == "Decimal") { 
+        result = parseInt(inputNumber, 8);
     } 
-    
-    else if (x == "Octal" && y == "Hexadecimal") {
-        tempe = parseInt(num, 8);
-        ans = Number(tempe).toString(16);
-    }
-    // Decimal Conversion
-    else if (x == "Decimal" && y == "Binary") {
-        ans = Number(num).toString(2);
+    else if (fromBase == "Octal" && toBase == "Binary") { 
+        result = Number(parseInt(inputNumber, 8)).toString(2);
     } 
-    
-    else if (x == "Decimal" && y == "Octal") {
-        ans = Number(num).toString(8);
+    else if (fromBase == "Octal" && toBase == "Hexadecimal") { 
+        result = Number(parseInt(inputNumber, 8)).toString(16);
     } 
-    
-    else if (x == "Decimal" && y == "Hexadecimal") {
-        ans = Number(num).toString(16);
+
+    // Conversion from decimal
+    else if (fromBase == "Decimal" && toBase == "Binary") { 
+        result = Number(inputNumber).toString(2);
     } 
+    else if (fromBase == "Decimal" && toBase == "Octal") { 
+        result = Number(inputNumber).toString(8);
+    } 
+    else if (fromBase == "Decimal" && toBase == "Hexadecimal") { 
+        result = Number(inputNumber).toString(16);
+    } 
+
+    // Invalid selection of bases or input
     else {
-        ans = "Invalid Selectors or Input"
+        result = "Invalid Selectors or Input";
     }
 
-    document.getElementById("resultText").innerHTML = ans;
+    // Display the result
+    document.getElementById("resultText").innerHTML = result;
 }
