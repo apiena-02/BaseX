@@ -1,1 +1,1 @@
-# Base-Converter-Tool
+# Base-Converter-ToolThis project converts numbers between different numeral systems. 
