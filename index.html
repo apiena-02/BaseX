@@ -9,13 +9,10 @@
 <body>
     <!-- Header section -->
     <header>
-        <h1>Base Converter Tool</h1>
-        <p>Meet the Base Converter Tool! Easily switch between binary, decimal, hexadecimal, and octal numbers. Select your starting and ending formats, enter your number, and click convert.</p>
+        <h1>BaseX</h1>
     </header>
 
     <div class="input-container">
-        <!-- Input field for entering the number -->
-        <input type="text" id="inputNumber" name="inputNumber" placeholder="Enter number here"/>
 
         <!-- Dropdown for selecting the starting base -->
         <select id="selectFrom">
@@ -25,6 +22,9 @@
             <option>Hexadecimal</option>
             <option>Octal</option>
         </select>
+
+        <!-- Input field for entering the number -->
+        <input type="text" id="inputNumber" name="inputNumber" placeholder="Enter number here"/>
         
         <!-- Dropdown for selecting the target base -->
         <select id="selectTo">
@@ -36,7 +36,7 @@
         </select>
         
         <!-- Button for base conversion -->
-        <button onclick="convertBase()">Convert</button>
+        <button onclick="convertBase()">CONVERT</button>
     </div>
 
     <div class="result-container">
