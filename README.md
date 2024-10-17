@@ -1,1 +1,3 @@
-# Base-Converter-ToolThis project converts numbers between different numeral systems. 
+# BaseX
+
+This project converts numbers between different numeral systems. 
