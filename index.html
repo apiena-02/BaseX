@@ -1,13 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base Converter Tool</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header section -->
+    <header>
+        <h1>BaseX</h1>
+    </header>
+
+    <div class="input-container">
+
+        <!-- Dropdown for selecting the starting base -->
+        <select id="selectFrom">
+            <option disabled selected>From</option>
+            <option>Binary</option>
+            <option>Decimal</option>
+            <option>Hexadecimal</option>
+            <option>Octal</option>
+        </select>
+
+        <!-- Input field for entering the number -->
+        <input type="text" id="inputNumber" name="inputNumber" placeholder="Enter number here"/>
+        
+        <!-- Dropdown for selecting the target base -->
+        <select id="selectTo">
+            <option disabled selected>To</option>
+            <option>Binary</option>
+            <option>Decimal</option>
+            <option>Hexadecimal</option>
+            <option>Octal</option>
+        </select>
+        
+        <!-- Button for base conversion -->
+        <button onclick="convertBase()">CONVERT</button>
+    </div>
+
+    <div class="result-container">
+        <!-- Displaying the conversion result -->
+        <p id="resultText"></p>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
 </html>
