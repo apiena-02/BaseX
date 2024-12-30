@@ -11,7 +11,15 @@ function ConvertBase(){
     useEffect(() => {
         document.body.className = darkMode ? "dark-mode" : "light-mode";
     }, [darkMode]);
-    
+
+    const toggleTheme = () => {
+        setDarkMode((prevMode) => {
+            const newMode = !prevMode;
+            document.body.className = newMode ? "dark-mode" : "light-mode";
+            return newMode;
+        });
+    };
+
     const handleChangeFrom = (event) => {
         setBaseFrom(event.target.value)
     }
@@ -100,15 +108,6 @@ function ConvertBase(){
 
 
     };
-
-    const toggleTheme = () => {
-        setDarkMode((prevMode) => {
-            const newMode = !prevMode;
-            document.body.className = newMode ? "dark-mode" : "light-mode"; // Update body class
-            return newMode;
-        });
-    };
-    
     return(
         <div className={darkMode ? "dark-mode" : "light-mode"}>
             <header>
