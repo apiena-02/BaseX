@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function ConvertBase(){
 
@@ -8,6 +8,10 @@ function ConvertBase(){
     const [result, setResult] = useState("");
     const [darkMode, setDarkMode] = useState(true);
 
+    useEffect(() => {
+        document.body.className = darkMode ? "dark-mode" : "light-mode";
+    }, [darkMode]);
+    
     const handleChangeFrom = (event) => {
         setBaseFrom(event.target.value)
     }
