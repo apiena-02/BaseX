@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 function ConvertBase(){
 
@@ -7,18 +7,6 @@ function ConvertBase(){
     const [baseTo, setBaseTo] = useState("To");
     const [result, setResult] = useState("");
     const [darkMode, setDarkMode] = useState(true);
-
-    useEffect(() => {
-        document.body.className = darkMode ? "dark-mode" : "light-mode";
-    }, [darkMode]);
-
-    const toggleTheme = () => {
-        setDarkMode((prevMode) => {
-            const newMode = !prevMode;
-            document.body.className = newMode ? "dark-mode" : "light-mode";
-            return newMode;
-        });
-    };
 
     const handleChangeFrom = (event) => {
         setBaseFrom(event.target.value)
@@ -109,17 +97,10 @@ function ConvertBase(){
 
     };
     return(
-        <div className={darkMode ? "dark-mode" : "light-mode"}>
+        <div>
             <header>
                 <h1>BaseX</h1>
             </header>
-            <div className="toggle-container">
-                <label className="toggle-switch">
-                <input type="checkbox" checked={darkMode} onChange={toggleTheme} />
-                <span className="slider"></span>
-                </label>
-                <span>{darkMode ? "Dark Mode" : "Light Mode"}</span>
-            </div>
             <div class="input-container">
                 <select value={baseFrom} onChange={handleChangeFrom}>
                     <option disabled selected>From</option>
